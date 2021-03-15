@@ -1,0 +1,22 @@
+title view SPA
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server->browser: return html code
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: return css code
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server->browser: return js code
+
+note over browser:
+browser execute JS then request the json 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: return json data
+
+note over browser:
+browser  render the notes to display on html
+end note
+
